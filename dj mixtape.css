@@ -1,0 +1,67 @@
+body{
+    background-color: rgb(233, 229, 229);
+}
+
+.mixtape{
+    text-align: center;
+    font-size: 110%;
+    background-color: rgb(255, 254, 254);
+    width: 90%;
+    margin-left: 70px;
+    padding: 20px;
+}
+
+.mixtape-title{
+    font-size: 110%;
+    font-weight: bold;
+    color: #1a1a1a;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.mixtape-title::after{
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: #fdb813;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+}
+
+.mixtape-section{
+    background: rgb(224, 221, 221);
+    padding: 30px;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+input [type="file"] {
+    display: block;
+    margin: 20px auto;
+}
+audio {
+    width: 100%;
+    margin-top: 10px;
+}
+.mixtape-section h2{
+    color: #000;
+}
+
+.mixtape-section {
+    background: rgb(224, 221, 221);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .mixtape{
+        width: 80%;
+        margin-left: 50px;
+    }
+}

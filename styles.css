@@ -1,0 +1,372 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    color: #fff;
+    padding-top: 170px;
+    background-color: #fff;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1200;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: gray;
+    border-bottom: 2px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: relative;
+}
+
+.navbar .nav-links .nav-link {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-item {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown-icon {
+    margin-left: 5px;
+    font-size: 0.8rem;
+}
+
+.dropdown-menu li a:hover {
+    color: yellow;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: gray;
+    list-style: none;
+    padding: 10px;
+    width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu li {
+    padding: 10px;
+    text-align: left;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+.navbar .nav-links .nav-link:hover {
+    color: yellow;
+    list-style: none;
+}
+
+.nav-item a.active {
+    color: #000;
+    font-weight: bold;
+    border-bottom: 2px solid yellow;
+}
+
+.nav-item:hover .nav-link {
+    color: yellow;
+}
+
+.navbar .nav-links .nav-link:hover + .dropdown-menu,
+.navbar .nav-links .nav-link:focus + .dropdown-menu {
+    display: block;
+}
+
+#welcome {
+    text-align: center;
+    color: #000;
+    font-size: 30px;
+    margin-top: 30px;
+    max-width: 200%;
+    padding: 20px;
+}
+
+#about > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: #000;
+    margin-right: 50px;
+}
+
+.next-about p {
+    text-align: center;
+    width: 95%;
+    margin-bottom: 100px;
+    text-align: justify;
+    font-size: 110%;
+    margin-left: 5%;
+}
+
+.section-title {
+    color: black;
+    text-align: center;
+}
+
+.video-gallery {
+    display: flex;
+    gap: 20px; /* Space between videos */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.video-box {
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    height: 308px;
+    width: 408px;
+}
+
+video {
+    width: 408px;
+    height: 308px;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* CSS for image carousel */
+.carousel-container {
+    position: relative;
+    width: 1260px;
+    height: 1020px;
+    margin: 5px auto;
+    overflow: hidden;
+    border-radius: 1px;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img {
+    width: 1260px;
+    height: 1020px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.carousel-dots {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.active, .dot:hover {
+    background-color: #666;
+}
+
+/* Footer CSS */
+footer {
+    background-color: gray;
+    color: #fff;
+    text-align: center;
+    padding: 20px 10px; /* Adjust padding for small screens */
+    margin-top: 30px;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+footer p {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px 0; /* Add margin for better spacing */
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow links to wrap on small screens */
+    margin-top: 10px;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 5px 10px; /* Adjust margin for small screens */
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px; /* Adjust font size for small screens */
+}
+
+footer ul li a:hover {
+    color: #ffcc0e;
+}
+
+.footer-nav li a, .footer-address p a:hover {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-nav li a:hover, .footer-address p a {
+    color: #ffcc0e;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    position: relative; /* Ensure the footer is not fixed or absolute */
+    z-index: 1; /* Ensure it's above other elements */
+}
+
+footer {
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+}
+
+.hamburger-box {
+    width: 30px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+}
+
+.hamburger-inner {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+}
+
+.hamburger-inner::before,
+.hamburger-inner::after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    transition: transform 0.3s;
+}
+
+.hamburger-inner::before {
+    top: -8px;
+}
+
+.hamburger-inner::after {
+    top: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    
+    .hamburger {
+        display: block;
+    }
+
+    .navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: gray;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+
+    .navbar .nav-links .nav-item {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .carousel-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .carousel-track img {
+        width: 100%;
+        height: auto;
+    }
+
+    #welcome{
+        font-size: 15px;
+        margin-top: -6%;
+    }
+
+    .next-about p{
+        font-size: 110%;
+        margin-left: 10%;
+    }
+
+    .section-title{
+        font-size: 100%;
+        margin-top: -14%;
+    }
+
+    footer ul{
+        flex-direction: column;
+    }
+
+
+}

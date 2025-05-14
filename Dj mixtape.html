@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dj Mixtape Upload</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dj mixtape.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a class="navbar-brand" href="index.html"><img src="/resources/images/logo.png" alt="logo"
+                style="width: 100px; height: 100px;">
+            </a>
+        </div>
+
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" id="home-link">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link" id="home-link">ABOUT</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="services.html" class="nav-link">SERVICES</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="Dj mixtape.html" class="nav-link">DJ MIXTAPE</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link" id="home-link">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+           
+    <main>
+        <section id="mixtape">
+            <div class="mixtape">
+                <h1 class="mixtape-title">Ultimate DJ Spunky Mixtape</h1>
+                <div class="mixtape-section">
+                    <h2>Ultimate Dj Spunky 2025 Mixtape</h2>
+                    <audio id="audio-player" controls>
+                            <source id="auido-source" src="resources/Audio/2025 MIXTAPE.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+                <div class="mixtape-section">
+                    <h2>Ultimate Dj Spunky Gosple Mixtape</h2>
+                    <audio id="audio-player" controls>
+                            <source id="auido-source" src="resources/Audio/djspunky gosple mix.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+         document.getElementById('mixtape-upload').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const audioPlayer = document.getElementById('audio-player');
+                const audioSource = document.getElementById('audio-source');
+
+                const fileURL = URL.createObjectURL(file);
+                audioSource.src = fileURL;
+                audioPlayer.load();
+                audioPlayer.play();
+            }
+        });
+    </script>
+              
+        <footer class="footer">
+            <div class="footer-content">
+                <h2 class="footer-title">Let's work together</h2>
+                <div class="footer-links">
+                    <ul class="footer-nav">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="services.html">Service</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <address class="footer-address">
+                    <p>Kubwa, Abuja, FCT</p>
+                    <p><a href="mailto:festusm455@gmail.com">festusmichael455@gmail.com</a></p>
+                </address>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;2025 Ultimate DJ Spunky Event & Entertainment</p>
+            </div>
+        </footer>
+        <script>
+            // JavaScript to toggle the hamburger menu
+            const hamburger = document.querySelector('.hamburger');
+             const navLinks = document.querySelector('.nav-links');
+     
+             hamburger.addEventListener('click', () => {
+                 navLinks.classList.toggle('active');
+             });
+         </script>
+</body>
+</html>

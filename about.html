@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a class="navbar-brand" href="index.html"><img src="/resources/images/logo.png" alt="logo"
+                style="width: 100px; height: 100px;">
+            </a>
+        </div>
+
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        
+        <nav class="navbar">
+            <ul class="nav-links" id="navLinks">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" id="home-link">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link" id="home-link">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">SERVICES</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Dj mixtape.html" class="nav-link">DJ MIXTAPE</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link" id="home-link">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="welcome">
+            <h1>ABOUT US</h1>
+            <div class="welcome-div"></div>
+        </section>
+
+        <section class="about-link">
+            <div class="about-content">
+                <p>I'm Ultimate Dj Spunky, bringing the best beats and sound to the crowd.
+                    From underground clubs,house parties,pool party to Big Festivals,
+                    Being a DJ means making your crowd and people happy and understanding them so
+                    I'm ready to make you dance all night long.
+                    Bringing the best beats to the crowd,
+                    from underground clubs and house parties to massive festivals.
+                    I know how to keep the vibe alive and the dance floor packed all night long!
+                    My goal is to provide an <strong>unforgettable music experience</strong>,
+                    whether it's a <strong>wedding, birthday party</strong>,<strong>club night</strong>, or <strong>private event</strong>.
+                    I mix genres, read the crowd, and create an electrifying atmosphere.
+                </p>
+            </div>
+            <section class="about-section">
+                <div class="about-container">
+                    <div class="icon">
+                        <img src="resources/images/OUR VISION.jpeg" alt="vision icon">
+                    </div>
+                    <div class="text">
+                        <h3>OUR VISION</h3>
+                        <p>To set the standard for premium DJ entertainment in Abuja by delivering electrifying
+                            performances, seamless music transitions, and unforgettable experiences at weddings,
+                            luxury house parties, and receptions. Ultimate DJ Spunky aims to create timeless memories
+                            and set the perfect vibe for every event.</p>
+                    </div>
+                </div>
+                <div class="about-container">
+                    <div class="icon">
+                        <img src="resources/images/OBJECTIVE.jpeg" alt="vision icon">
+                    </div>
+                    <div class="text">
+                        <h3>OUR OBJECTIVE</h3>
+                        <p>As a professional DJ, the primary objective is to create unforgettable musical experiences that 
+                            elevate every event. Ultimate DJ Spunky aims to set the perfect mood for weddings, luxury house parties, 
+                            and receptions by curating seamless mixes that keep the energy alive. Through an expert understanding of 
+                            music genres, crowd psychology, and sound dynamics, the goal is to ensure that every guest is engaged and entertained from start to finish.</p>
+                    </div>
+                </div>
+                <div class="about-container">
+                    <div class="icon">
+                        <img src="resources/images/MISSION.jpeg" alt="vision icon">
+                    </div>
+                    <div class="text">
+                        <h3>OUR MISSION</h3>
+                        <p>To provide world-class DJ entertainment that transforms events into unforgettable experiences. 
+                            Ultimate DJ Spunky is committed to delivering seamless mixes, high-energy performances, and 
+                            personalized music selections that resonate with diverse audiences. By blending creativity, 
+                            professionalism, and cutting-edge sound technology, we bring the perfect vibe to every wedding, luxury house party, and reception in Abuja, kaduna and beyond."</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <h2 class="footer-title">Let's work together</h2>
+            <div class="footer-links">
+                <ul class="footer-nav">
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="services.html">Service</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <address class="footer-address">
+                <p>Kubwa, Abuja, FCT</p>
+                <p><a href="mailto:festusm455@gmail.com">festusmichael455@gmail.com</a></p>
+            </address>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;2025 Ultimate DJ Spunky Event & Entertainment.</p>
+        </div>
+    </footer>
+
+    <script>
+       // JavaScript to toggle the hamburger menu
+       const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

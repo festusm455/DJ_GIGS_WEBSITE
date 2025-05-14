@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ SPUNKY PAGE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a class="navbar-brand" href="index.html"><img src="/resources/images/logo.png" alt="logo"
+                style="width: 100px; height: 100px;">
+            </a>
+        </div>
+        
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+        
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" id="home-link">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link" id="home-link">ABOUT</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">SERVICES</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Dj mixtape.html" class="nav-link">DJ MIXTAPE</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link" id="home-link">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="carousel-container">
+        <div class="carousel-track">
+            <img src="/resources/images/dj spunky.jpg" alt="Image 1">
+            <img src="/resources/images/logospunky.jpg" alt="Image 2">
+            <img src="/resources/images/party.jpg" alt="Image 3">
+            <img src="/resources/images/mixtape.jpg" alt="Image 4">
+        </div>
+        <div class="carousel-dots">
+            <span class="dot" onclick="showSlide(0)"></span>
+            <span class="dot" onclick="showSlide(1)"></span>
+            <span class="dot" onclick="showSlide(2)"></span>
+            <span class="dot" onclick="showSlide(3)"></span>
+        </div>
+    </section>
+        
+
+    <main>
+        <section id="welcome">
+            <h1>WELCOME TO SPUNKY WORLD OF ENTERTAINMENT</h1>
+        </section>
+
+        <section id="about" class="">
+            <div>
+                <div class="about-div">
+                    <div class="next-about">
+                            <p>Our commitment is to provide our clients an excellent, amazing and fun service
+                               by apporaching every wedding, event, house party and all etc... with enthusiasm.
+                               We never say "that's not my job", we make it happen. In other words,
+                               we get things done fast and amazingly well. DJ Spunky brings an unmatched energy to the stage, 
+                               ensuring your wedding, house party, or reception is filled with vibes, excitement, and non-stop dancing.
+                               <strong> Feel the Rhythm, Embrace the Groove!</strong> Whether you want a smooth, romantic vibe for your wedding or a high-energy mix for your party, 
+                               Ultimate DJ Spunky delivers beyond expectations. <strong> Let’s make magic together!</strong>Contact us today to bring your dream event to life.</p>
+                        </div>
+                    </section>
+                    
+                    <div class="service">
+                        <h1 class="section-title">Our Entertainment Videos</h1>
+                    </div>
+
+        <section class="container-vid">
+            <div class="video-gallery">
+                <div class="video-box">
+                    <video controls>
+                        <source src="resources/Videos/lv_0_20231001155331.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-box">
+                    <video controls>
+                        <source src="resources/Videos/lv_0_20231002131153.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="video-box">
+                    <video controls>
+                        <source src="resources/Videos/lv_0_20231126175631.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+                        
+        </main>
+        <footer class="footer">
+            <div class="footer-content">
+                <h2 class="footer-title">Let's work together</h2>
+                <div class="footer-links">
+                    <ul class="footer-nav">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="services.html">Service</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <address class="footer-address">
+                    <p>Kubwa, Abuja, FCT</p>
+                    <p><a href="mailto:festusm455@gmail.com">festusmichael455@gmail.com</a></p>
+                </address>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;2025 Ultimate DJ Spunky Event & Entertainment</p>
+            </div>
+        </footer>
+        
+    
+    <script>
+        // JavaScript to toggle the hamburger menu
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        let currentIndex = 0;
+            const slides = document.querySelectorAll('.carousel-track img');
+            const dots = document.querySelectorAll('.dot');
+            let interval;
+    
+            function showSlide(index) {
+                if (index >= slides.length) currentIndex = 0;
+                else if (index < 0) currentIndex = slides.length - 1;
+                else currentIndex = index;
+    
+                const track = document.querySelector('.carousel-track');
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    
+                updateDots();
+            }
+    
+            function updateDots() {
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[currentIndex].classList.add('active');
+            }
+    
+            function startCarousel() {
+                interval = setInterval(() => {
+                    showSlide(currentIndex + 1);
+                }, 2000);
+            }
+    
+            // Stop auto-slide on hover, resume when not hovered
+            slides.forEach(slide => {
+                slide.addEventListener('mouseenter', () => clearInterval(interval));
+                slide.addEventListener('mouseleave', startCarousel);
+            });
+    
+            // Manual dot navigation
+            dots.forEach((dot, i) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = i;
+                    showSlide(currentIndex);
+                });
+            });
+    
+            // Initialize carousel
+            showSlide(currentIndex);
+            startCarousel();
+    </script>
+</body>
+</html>

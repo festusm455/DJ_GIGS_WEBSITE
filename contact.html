@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a class="navbar-brand" href="index.html"><img src="/resources/images/logo.png" alt="logo"
+                style="width: 100px; height: 100px;">
+            </a>
+        </div>
+        
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" id="home-link">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link" id="home-link">ABOUT</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="services.html" class="nav-link">SERVICES</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="Dj mixtape.html" class="nav-link">DJ MIXTAPE</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link" id="home-link">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+     <main>
+        <div class="contact-container">
+            <h2 class="contact-title">Get in Touch with Us</h2>
+            <p>At Dj Spunky Entertainment, we are committed to excellence and greatness. 
+                if you have inquiries about our services, we are glad to always asist you. Reach out to us,
+                and let discuss how we can achive success and positivie outcome of out work.</p>
+                <div class="contact-info">
+                    <div class="info-box">
+                        <h4>Phone</h4>
+                        <p>+234-816-000-6952</p>
+                        <p>+234-905-960-8825</p>
+                    </div>
+                    <div class="info-box">
+                        <h4>Email</h4>
+                        <p>ultimatedjspunky@gmail.com</p>
+                    </div>
+                    <div class="info-box">
+                        <h4>Address</h4>
+                        <p>Kubwa, opposite UBA Bank, Abuja, Nigeria</p>
+                    </div>
+        </div>
+            <h2 class="contact-title">Send us a Message</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Full Name"required>
+                <input type="email" placeholder="Email"required>
+                <input type="tel" placeholder="Phone Number"required>
+                <textarea rows="4" placeholder="How may we help you?"></textarea>
+                <button type="book now">Book Now</button>
+            </form>
+            <section class="section map-section">
+                <h2 class="section-title">Our Location</h2>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.0000000000005!2d7.322000!3d9.153800!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0a0000000000%3A0x0000000000000000!2s63%20Gado%20Nasko%20Street%2C%20Kubwa%2C%20Abuja%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1707234567890!5m2!1sen!2sng" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </section>
+        </div>
+        </main>
+        <footer class="footer">
+            <div class="footer-content">
+                <h2 class="footer-title">Let's work together</h2>
+                <div class="footer-links">
+                    <ul class="footer-nav">
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="services.html">Service</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <address class="footer-address">
+                    <p>Kubwa, Abuja, FCT</p>
+                    <p><a href="mailto:festusm455@gmail.com">festusmichael455@gmail.com</a></p>
+                </address>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;2025 Ultimate DJ Spunky Event & Entertainment</p>
+            </div>
+        </footer>
+            <script>
+                // JavaScript to toggle the hamburger menu
+                const hamburger = document.querySelector('.hamburger');
+                const navLinks = document.querySelector('.nav-links');
+        
+                hamburger.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+            </script>
+        
+</body>
+</html>
