@@ -18,11 +18,11 @@ body{
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center horizontally */
     margin: auto;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 .services-details p {
     font-size: 110%;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     justify-content: center;
     margin-left: 90px;
     color: #000;
@@ -31,6 +31,7 @@ body{
 }
 
 .section-title{
+    font-family: 'Times New Roman', Times, serif;
     font-size: 22px;
     font-weight: bold;
     color: #1a1a1a;
@@ -38,7 +39,6 @@ body{
     display: inline-block;
     padding-bottom: 5px;
     margin-bottom: 15px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .section-title::after {
