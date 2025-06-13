@@ -64,12 +64,26 @@
                     </div>
         </div>
             <h2 class="contact-title">Send us a Message</h2>
-            <form class="contact-form">
-                <input type="text" placeholder="Full Name"required>
-                <input type="email" placeholder="Email"required>
-                <input type="tel" placeholder="Phone Number"required>
-                <textarea rows="4" placeholder="How may we help you?"></textarea>
-                <button type="book now">Book Now</button>
+            <!-- Hidden success message (will be shown after successful submit) -->
+            <div id="success-message" style="display: none; padding: 10px; background-color: #e6ffed; color: #2e7d32; border: 1px solid #a5d6a7; border-radius: 5px; display: none; align-items: center; font-family: sans-serif; margin-bottom: 1em;">
+            <span style="font-size: 1.5em; margin-right: 10px;">✅</span>
+            <span><strong>Success:</strong> Request saved!</span>
+            </div>
+
+           <form class="contact-form" id= "contactForm" action="http://localhost:3000/api/request" method="POST">
+                <label>Full Name: <br>
+                    <input type="text" name="name" required>
+                </label><br><br>
+                <label>Email: <br>
+                    <input type="email" name="email" required>
+                </label><br><br>
+                <label>Event Date: <br>
+                    <input type="date" name="event_date" required>
+                </label><br><br>
+                <label>Message:<br>
+                    <textarea name="message" rows="5" cols="30" required></textarea>
+                </label><br><br>
+                <button type="submit">Send Request</button>
             </form>
             <section class="section map-section">
                 <h2 class="section-title">Our Location</h2>
@@ -112,6 +126,44 @@
                     navLinks.classList.toggle('active');
                 });
             </script>
+           <script>
+            const form = document.getElementById('contactForm');
+            const successMessage = document.getElementById('success-message');
+
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault(); // Prevent page reload
+
+                // Basic front-end validation (HTML5 handles most, but here's extra safety)
+                if (!form.checkValidity()) {
+                form.reportValidity(); // shows built-in validation messages
+                return;
+                }
+
+                const formData = new FormData(form);
+
+                try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    successMessage.style.display = 'flex';
+                    form.reset();
+                } else {
+                    successMessage.style.display = 'none';
+                    alert("There was a problem saving your request.");
+                }
+                } catch (error) {
+                successMessage.style.display = 'none';
+                alert("Something went wrong. Please try again later.");
+                console.error(error);
+                }
+            });
+          </script>
+
         
 </body>
 </html>
